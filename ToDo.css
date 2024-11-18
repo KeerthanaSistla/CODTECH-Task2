@@ -4,7 +4,10 @@
 }
 
 body{
-    background-color: #fff9ed;
+    background-color: #c8c3bf;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     color: #000000;
 }
@@ -19,7 +22,6 @@ header{
     color: #fff9ed;
     font-size: 4.5vmin;
     font-family: Cambria, Cochin, Georgia, Times, serif;
-    width: 100%;
     font-weight: 550;
 }
 
@@ -30,6 +32,100 @@ main{
     align-items: center;
     height: 80vh;
     margin: 0;
+}
+
+h2 {
+    font-size: 5vmin;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 75%;
+    height: 5vmin;
+    padding: 1vmin;
+    padding-left: 2vmin;
+    border-radius: 2vmin;
+    border: 2px solid #ffa60036;
+    background: #fff9f0;
+    font-size: 4vmin;
+}
+
+#submit{
+    cursor: pointer;
+    border: 1px solid #f7e9d5;
+    background: #ffa60078;
+    width: 20%;
+    padding: 1vmin;
+    border-radius: 2vmin;
+    font-size: 4vmin;
+    transition: background-color 0.3s ease;
+}
+#submit:hover {
+    background: #fac5766f;
+    border: 1px solid #f7e9d5;
+}
+
+@media (width<1319px) {
+    #submit{
+        font-size: 3.5vmin;
+        width: 25%;
+    }
+    input[type="text"] {
+        width: 70%;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+li.completed {
+    background-color: #e0ffe080;
+    text-decoration: line-through;
+}
+
+li.pending {
+    background-color: #ffe0e080;
+}
+
+.filters {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.filters button {
+    background-color: #ffa60078;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 2.5vmin;
+    cursor: pointer;
+}
+
+.filters button:hover{
+    background-color: #fac5766f;
 }
 
 .container {
@@ -43,53 +139,6 @@ main{
     align-content: center;
 }
 
-h2 {
-    font-size: 5vmin;
-}
-
-form {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-}
-
-input[type="text"] {
-    width: 75%;
-    height: 7vmin;
-    padding: 1vmin;
-    padding-left: 2vmin;
-    border-radius: 2vmin;
-    border: 2px solid #ffa60036;
-    background: #fff9f0;
-    font-size: 5vmin;
-}
-
-#submit{
-    cursor: pointer;
-    border: 1px solid #f7e9d5;
-    background: #ffa60036;
-    width: 20%;
-    padding: 1vmin;
-    border-radius: 2vmin;
-    font-size: 4vmin;
-    transition: background-color 0.3s ease;
-}
-
-@media (width<1319px) {
-    #submit{
-        font-size: 3.5vmin;
-        width: 25%;
-    }
-    input[type="text"] {
-        width: 70%;
-    }
-}
-
-#submit:hover {
-    background: #fff9f0;
-    border: 1px solid #f7e9d5;
-}
-
 ul {
     list-style: none;
 }
@@ -97,7 +146,7 @@ ul {
 li {
     margin: 1vmin;
     border: 1px solid #f7e9d5;
-    background: #fff9f0;
+    background: #fff9f086;
     padding: 1vmin;
     border-radius: 1vmin;
     display: flex;
@@ -116,7 +165,7 @@ li {
 #edit{
     height: 4vmin;
     width: 10vmin;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     text-shadow: 0 0 0.5vmin #fff9f0;
     text-align: center;
 }
@@ -138,7 +187,8 @@ li button {
     background: #f11919;
     border: none;
     color: #241903;
-    padding: 5px 10px;
+    padding: 0.75vmin;
+    margin: 0.25vmin;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -151,7 +201,8 @@ li button:hover {
     background: #ffea07;
     border: none;
     color: #241903;
-    padding: 5px 10px;
+    padding: 0.75vmin;
+    margin: 0.25vmin;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -162,12 +213,13 @@ li button:hover {
 
 hr{
     display: block;
-    width: 100%;
+    /* width: 100%; */
     border: 0.5px solid #241903;
     margin: 0.25px;
 }
   
 footer{
+    background: #fff9ed;
     position: absolute;
     text-align: left;
     bottom: 1px;

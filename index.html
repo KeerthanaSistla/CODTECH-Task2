@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <link rel="icon" type="image/x-icon" href="SK_Logo.ico">
+    <title>Task Manager</title>
     <link rel="stylesheet" href="ToDo.css">
 </head>
 <body>
-    <header><h1>TO-DO LIST</h1></header>
+    <header><h1>TASK MANAGER</h1></header>
     <main>
         <div class="container">
             <form id="task-form">
-                <input type="text" id="task-input" placeholder="Task name/details" required>
+                <input type="text" id="task-input" placeholder="Task name/details" aria-label="Task input" required>
                 <button id="submit" type="submit">Add Task</button>
             </form>
-            <br>
+            <div class="filters">
+                <button id="filter-all">All</button>
+                <button id="filter-completed">Completed</button>
+                <button id="filter-pending">Pending</button>
+            </div>
             <ul id="task-list"></ul>
         </div>
     </main>
-    <footer><hr><a href="https://github.com/KeerthanaSistla/CODTECH-Task2">GitHub repository: 05-ToDoList</a>
+    <footer><hr><a href="https://github.com/KeerthanaSistla/CODTECH-Task2">GitHub repository: 05-ToDoList</a></footer>
     <script src="ToDo.js"></script>
 </body>
 </html>
